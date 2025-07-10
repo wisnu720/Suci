@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun ke-17</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+  background: url('nci.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 40px;
+      text-align: center;
+      max-width: 400px;
+      position: relative;
+    }
+    .card h1 {
+      font-size: 2.5rem;
+      color: #ff5e78;
+    }
+    .card p {
+      font-size: 1.1rem;
+      color: #555;
+      margin: 20px 0;
+    }
+    .btn {
+      background: #ff5e78;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #e94c67;
+    }
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background: #ff5e78;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: float 6s infinite ease-in-out;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #555;
+      transform: translateX(-50%);
+    }
+    .balloon:nth-child(1) {
+      left: 10%;
+      animation-delay: 0s;
+    }
+    .balloon:nth-child(2) {
+      left: 30%;
+      background: #fcb045;
+      animation-delay: 2s;
+    }
+    .balloon:nth-child(3) {
+      left: 60%;
+      background: #ff6f91;
+      animation-delay: 4s;
+    }
+    .balloon:nth-child(4) {
+      left: 80%;
+      background: #845ec2;
+      animation-delay: 1s;
+    }
+    @keyframes float {
+      0% { bottom: -60px; }
+      50% { bottom: 100%; }
+      100% { bottom: -60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <div class="card">
+    <h1>selamat ulang tahun yang ke 5 tahun 🔥</h1>
+    <p>Hari ini kamu menginjak usia <strong>17 tahun</strong>! Semoga hari-harimu selalu bahagia, penuh keberkahan, dan sukses menyertaimu.serta dikelilingi orang2 baik,Nikmati masa-masa indah ini,dan jangan lupa nasi padang 1 pake sambel yang pedes ya!!!!!</p>
+    <button class="btn" onclick="showMore()">Lihat Pesan Khusus</button>
+    <p id="specialMessage" style="display:none; margin-top: 20px; color:#333;">
+      Hari ini bukan cuma tentang pertambahan usia, tapi tentang pertumbuhanmu jadi pribadi yang luar biasa. Semangat terus yaa!jangan pernah menyerah kalo menyerah kalah kalo kalah tidak menang kalo tidak menang berarti aku yang menang dapet bolu😞
+    </p>
+  </div>
+
+  <script>
+    function showMore() {
+      const msg = document.getElementById("specialMessage");
+      if (msg.style.display === "none") {
+        msg.style.display = "block";
+      } else {
+        msg.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
